@@ -1,0 +1,60 @@
+<html> 
+<head> 
+<title>Form</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+</head> 
+<script type="text/javascript" 
+src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+function test(){
+	$.get("/getaward.do", function(data){
+		  alert("Data Loaded: " + data);
+		});
+
+}
+
+
+</script>
+<body> 
+<form action="post.php" method="get" name="form1" id="form1"> 
+<table width="271" border="0" align="center" cellpadding="0" cellspacing="0"> 
+<tr> 
+<td width="85"><div align="right">姓名：</div></td> 
+<td width="186"><input name="username" type="text" id="username"></td> 
+</tr> 
+<tr> 
+<td><div align="right">密码：</div></td> 
+<td><input name="password" type="password" id="password"></td> 
+</tr> 
+<tr> 
+<td><div align="right">密码确认：</div></td> 
+<td><input name="password2" type="password" id="password2"></td> 
+</tr> 
+<tr> 
+<td><div align="right">性别：</div></td> 
+<td><select name="sex" id="sex"> 
+<option value="0" selected>男</option> 
+<option value="1">女</option> 
+</select></td> 
+</tr> 
+<tr> 
+<td><div align="right">生日：</div></td> 
+<td><input name="birthday" type="text" id="birthday"></td> 
+</tr> 
+<tr> 
+<td><div align="right">E-mail：</div></td> 
+<td><input name="email" type="text" id="email"></td> 
+</tr> 
+<tr> 
+<td><div align="right">职业：</div></td> 
+<td><input name="job" type="text" id="job"></td> 
+</tr> 
+</table> 
+<p align="center"> 
+
+<input type="button" onclick="test()"> 
+<input type="reset" value="Reset"> 
+</p> 
+</form> 
+</body> 
+</html>
